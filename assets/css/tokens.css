@@ -1,0 +1,36 @@
+/* assets/css/tokens.css - colors + fonts ONLY. The one file to edit to re-skin.
+   Palette supplied by Acton Academy El Salvador (Shannon), 2 September 2026. */
+:root{
+  /* ---- Acton brand colours, exactly as supplied ---- */
+  --ink:         #0C2A50;   /* brand navy. Main text, dark sections, footer, logo colour */
+  --ink-soft:    #142A41;   /* deeper navy, second brand tone */
+  --accent:      #E6A733;   /* brand gold. Buttons, eyebrows, price figure, accents */
+  --mint:        #BCE4D9;   /* brand mint. Soft section backgrounds and highlights */
+  --bg:          #FCFCFC;   /* page background */
+  --surface:     #F5F5F5;   /* alternating section background */
+
+  /* ---- derived from the brand colours, not supplied ---- */
+  --accent-warm: #F2C05F;   /* lighter gold for hovers and dark-section headings */
+  --accent-2:    #1B4C87;   /* link blue, derived from the brand navy */
+  --surface-2:   #BCE4D9;   /* the mint, used as a full section tint */
+  --mint-soft:   #E4F3EE;   /* mint at low strength, for cards on mint sections */
+  --muted:       #56657C;   /* secondary text */
+  --line:        #E3E3E3;   /* hairlines and borders */
+  --line-warm:   #CBD9D4;   /* hairlines on mint sections */
+  --good:        #1E7A5A;   /* affirmative ticks, harmonises with the mint */
+  --bad:         #B4443A;   /* the extra costs other schools bill separately */
+  --plain:       #93A1B4;   /* neutral marks in comparisons */
+
+  /* Footer credit colors (read by the EKY credit logo) */
+  --footer-bg: var(--ink);
+  --footer-fg: #FFFFFF;
+
+  /* ---- Fonts, as used by the school ---- */
+  /* Both are Google Fonts under the SIL Open Font License, free for commercial use. */
+  --font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-body:    'Poppins', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  /* Layout */
+  --max: 1180px;
+  --max-narrow: 780px;
+}

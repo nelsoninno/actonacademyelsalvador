@@ -1,0 +1,8 @@
+# robots.txt for actonacademyelsalvador.com
+# Every page is open and indexable, including AI search and user-fetch agents.
+
+User-agent: *
+Allow: /
+
+# AI guide: /llms.txt
+Sitemap: https://www.actonacademyelsalvador.com/sitemap.xml
