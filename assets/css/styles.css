@@ -239,7 +239,7 @@ table.compare thead th:nth-child(2){background:var(--accent);color:var(--ink)}
 table.compare tbody tr:last-child td{border-bottom:0}
 table.compare tbody tr:nth-child(even){background:var(--surface)}
 table.compare td:first-child{font-weight:650;color:var(--ink);width:22%}
-table.compare td:nth-child(2){border-right:3px solid var(--accent)}
+table.compare td:nth-child(2){border-left:3px solid var(--accent);border-right:3px solid var(--accent)}
 .cmp-them{color:var(--muted)}
 .cmp-us{color:var(--ink)}
 
