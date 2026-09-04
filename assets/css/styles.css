@@ -126,7 +126,19 @@ section{padding:clamp(3.5rem,7vw,6.5rem) 0}
     var(--bg);
   overflow:hidden;
 }
-.hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:clamp(2rem,5vw,4.25rem);align-items:center}
+/* Oversized eagle watermark bleeding off the right edge, purely decorative.
+   ::after needs no markup and is ignored by screen readers. The hero already
+   clips with overflow:hidden, so the bleed cannot create a scrollbar. */
+.hero::after{
+  content:"";position:absolute;pointer-events:none;z-index:0;
+  right:-6%;top:3%;
+  width:clamp(280px,38vw,660px);aspect-ratio:170/112;
+  background:url(../images/logos/eagle-mark-navy-acton-academy-actonacademyelsalvador.com.png) no-repeat center/contain;
+  opacity:.07;
+}
+@media (max-width:880px){.hero::after{right:-18%;top:2%;width:60vw;opacity:.045}}
+@media (prefers-reduced-motion:no-preference){.hero::after{transition:opacity .4s ease}}
+.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.08fr .92fr;gap:clamp(2rem,5vw,4.25rem);align-items:center}
 .hero h1{margin-bottom:1.35rem}
 .hero h1 em{font-style:italic;color:var(--accent)}
 .hero-locator{
@@ -529,9 +541,11 @@ table.compare td:nth-child(2){border-left:3px solid var(--accent);border-right:3
 
 /* hero image */
 .hero-media .shot{
-  border-radius:22px;box-shadow:0 26px 60px rgba(16,35,63,.18);
+  border-radius:22px;
+  box-shadow:-1.15rem 1.15rem 0 0 var(--mint), 0 26px 60px rgba(16,35,63,.18);
   aspect-ratio:4/5;
 }
+@media (max-width:520px){.hero-media .shot{box-shadow:-.7rem .7rem 0 0 var(--mint), 0 18px 40px rgba(16,35,63,.16)}}
 .hero-media .shot img{transition:transform .9s cubic-bezier(.22,.61,.36,1)}
 .hero-media:hover .shot img{transform:scale(1.03)}
 
@@ -603,7 +617,9 @@ table.compare td:nth-child(2){border-left:3px solid var(--accent);border-right:3
 /* page hero with a side photo */
 .pagehero{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(1.6rem,4vw,3.25rem);align-items:center}
 @media (max-width:880px){.pagehero{grid-template-columns:1fr}.pagehero .shot{order:-1}}
-.pagehero .shot{aspect-ratio:4/3;box-shadow:0 20px 46px rgba(16,35,63,.14)}
+/* Same mint layer as the homepage hero, so every page photo reads alike. */
+.pagehero .shot{aspect-ratio:4/3;box-shadow:-1rem 1rem 0 0 var(--mint), 0 20px 46px rgba(16,35,63,.14)}
+@media (max-width:520px){.pagehero .shot{box-shadow:-.6rem .6rem 0 0 var(--mint), 0 14px 32px rgba(16,35,63,.13)}}
 
 /* photo inside an FAQ answer */
 .answer .shot{margin:1.1rem 0 .3rem;max-width:520px;aspect-ratio:3/2;border-radius:14px}
