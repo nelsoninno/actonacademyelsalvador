@@ -147,13 +147,6 @@ section{padding:clamp(3.5rem,7vw,6.5rem) 0}
 }
 .hero-media{position:relative}
 .hero-media img,.hero-media .ph{border-radius:22px;box-shadow:0 26px 60px rgba(16,35,63,.17)}
-.hero-badges{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.4rem}
-.badge{
-  display:inline-flex;align-items:center;gap:.4rem;
-  font-size:.78rem;font-weight:600;letter-spacing:.01em;
-  background:var(--surface);border:1px solid var(--line);
-  color:var(--ink-soft);padding:.42rem .85rem;border-radius:999px;
-}
 @media (max-width:880px){.hero-grid{grid-template-columns:1fr}.hero-media{order:-1}}
 
 /* ---------- placeholder image blocks ---------- */
