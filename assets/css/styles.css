@@ -310,56 +310,73 @@ table.compare td:nth-child(2){border-left:3px solid var(--accent);border-right:3
 .fit-col.yes li::before{content:"\2713";color:var(--good)}
 .fit-col.no li::before{content:"\2013";color:var(--plain)}
 
-/* ---------- pricing ---------- */
-.price-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.4rem,3vw,2.25rem);align-items:stretch;margin-top:2.4rem}
-@media (max-width:860px){.price-grid{grid-template-columns:1fr}}
+/* ---------- pricing, three columns ----------
+   Scoped under #eky-pricing so these rules cannot leak into anything else.
+   Colours and fonts come from tokens.css, never raw hex. */
+#eky-pricing{container-type:inline-size}
+#eky-pricing *{box-sizing:border-box}
+#eky-pricing .price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1.1rem,2vw,1.7rem);align-items:stretch;margin-top:2.4rem}
+@media (max-width:1080px){#eky-pricing .price-grid{grid-template-columns:1fr;max-width:520px;margin-inline:auto}}
 
-.price-card{
-  background:var(--bg);border:2px solid var(--accent);border-radius:22px;
-  padding:clamp(1.6rem,3vw,2.3rem);box-shadow:0 18px 46px rgba(12,42,80,.10);
-  display:flex;flex-direction:column;
-}
-/* the comparison box: same shape, no gold, nothing to celebrate */
-.price-card--other{
-  border:1px solid var(--line);box-shadow:none;background:var(--surface);
-}
-.price-card--other .price-lines li span:last-child{font-weight:600}
-.tier--other{color:var(--muted)}
-.price-lines li.extra span:last-child{color:var(--bad);font-weight:650}
-.price-lines li.extra span:first-child::before{
-  content:"+";color:var(--bad);font-weight:700;margin-right:.45rem;
-}
-.price-lines li.inc span:last-child{color:var(--good);font-weight:650}
-.price-lines li.inc span:first-child::before{
-  content:"\2713";color:var(--good);font-weight:700;margin-right:.45rem;
-}
-.price-total--open{border-top-color:var(--line)}
-.price-total--open .lbl{color:var(--muted)}
-.amt-open{
-  font-family:var(--font-display);font-weight:700;
-  font-size:clamp(1rem,.85rem + .5vw,1.25rem);line-height:1.25;
-  color:var(--bad);text-align:right;
-}
-.price-card .price-foot{margin-top:auto}
-.price-logo{height:42px;width:auto;max-width:100%;display:block;margin:0 0 1.2rem;align-self:flex-start;object-fit:contain}
-.price-card .tier{font-size:.76rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:.35rem}
-.price-card .sub{color:var(--muted);font-size:.92rem;margin-bottom:1.4rem}
-.price-lines{margin-bottom:1.1rem}
-.price-lines li{
-  display:flex;justify-content:space-between;gap:1rem;align-items:baseline;
-  padding:.62rem 0;border-bottom:1px dashed var(--line);font-size:.96rem;
-}
-.price-lines li span:first-child{color:var(--ink-soft)}
-.price-lines li span:last-child{font-weight:650;font-variant-numeric:tabular-nums;white-space:nowrap}
-.price-total{
-  display:flex;justify-content:space-between;gap:1rem;align-items:baseline;
-  padding:1.05rem 0 .3rem;border-top:2px solid var(--ink);
-}
-.price-total .lbl{font-family:var(--font-display);font-size:1.2rem;font-weight:600}
-.price-total .amt{font-family:var(--font-display);font-size:clamp(2.1rem,1.6rem + 2vw,3rem);font-weight:600;color:var(--accent);line-height:1;font-variant-numeric:tabular-nums}
-.price-total .amt small{font-family:var(--font-body);font-size:.9rem;font-weight:600;color:var(--muted);display:block;text-align:right;margin-top:.25rem}
-.price-foot{font-size:.87rem;color:var(--muted);margin-top:1.2rem;padding-top:1.1rem;border-top:1px solid var(--line)}
-.price-foot strong{color:var(--ink)}
+#eky-pricing .price-card{background:var(--bg);border:2px solid var(--accent);border-radius:22px;
+  padding:clamp(1.4rem,2vw,2rem);box-shadow:0 18px 46px rgba(12,42,80,.10);
+  display:flex;flex-direction:column;container-type:inline-size}
+#eky-pricing .price-card--other{border:1px solid var(--line);box-shadow:none;background:var(--surface)}
+#eky-pricing .price-foot{margin-top:auto}
+
+#eky-pricing .card-head{display:flex;justify-content:space-between;align-items:center;gap:1rem;min-height:56px;margin-bottom:.9rem}
+#eky-pricing .card-title{font-family:var(--font-display);font-weight:700;color:var(--ink);
+  font-size:clamp(1.7rem,1.4rem + 1vw,2.15rem);line-height:1;letter-spacing:-.02em}
+#eky-pricing .card-eagle{width:82px;height:54px;flex-shrink:0;
+  background:url(../images/logos/eagle-mark-navy-acton-academy-actonacademyelsalvador.com.png) no-repeat center/contain}
+
+#eky-pricing .tier{font-size:.74rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:.3rem}
+#eky-pricing .tier--other{color:var(--muted)}
+#eky-pricing .age{color:var(--muted);font-size:.9rem;font-weight:400;margin:0 0 1.2rem}
+
+#eky-pricing .enroll{font-size:clamp(.78rem,4cqi,1.05rem);color:var(--ink);font-weight:600;line-height:1.3;white-space:nowrap}
+#eky-pricing .enroll .eval{font-weight:700}
+#eky-pricing .enroll-note{color:var(--accent);font-size:.8rem;font-weight:600;margin-bottom:1rem}
+#eky-pricing .monthly-row{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;
+  font-size:clamp(.95rem,4cqi,1.12rem);color:var(--ink);font-weight:600;margin:.2rem 0 .5rem}
+#eky-pricing .monthly-row .mval{font-variant-numeric:tabular-nums;text-align:right;white-space:nowrap}
+#eky-pricing .mlines{list-style:none;margin:0 0 .4rem;padding:0}
+#eky-pricing .mlines li{display:flex;justify-content:space-between;gap:.85rem;align-items:center;
+  padding:.42rem 0;border-bottom:1px dashed var(--line);font-size:clamp(.72rem,3.35cqi,.86rem);color:var(--muted);line-height:1.3}
+#eky-pricing .mlines li span:first-child{min-width:0}
+#eky-pricing .mlines li span:last-child{font-weight:650;color:var(--ink-soft);font-variant-numeric:tabular-nums;white-space:nowrap;flex-shrink:0;text-align:right}
+#eky-pricing .mlines li.sep span:last-child{color:var(--bad);font-weight:650}
+#eky-pricing .pay-note{color:var(--accent);font-size:.8rem;font-weight:600;margin:.75rem 0 1rem}
+
+#eky-pricing .day-block + .day-block{margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid var(--line)}
+#eky-pricing .day-title{font-family:var(--font-display);font-size:1.55rem;font-weight:700;color:var(--ink);margin-bottom:.75rem;line-height:1}
+#eky-pricing .day-total{font-family:var(--font-display);font-weight:700;font-size:1.18rem;color:var(--ink);line-height:1.2}
+#eky-pricing .day-total strong{color:var(--accent);font-size:1.45rem}
+#eky-pricing .day-total-note{color:var(--accent);font-size:.8rem;font-weight:600;margin-top:.15rem}
+
+#eky-pricing .incl-head{font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--good);margin:1.15rem 0 .1rem}
+#eky-pricing .incl-head--extra{color:var(--bad)}
+#eky-pricing .plines{list-style:none;margin:0 0 1rem;padding:0}
+#eky-pricing .plines li{display:flex;justify-content:space-between;gap:1rem;align-items:baseline;
+  padding:.55rem 0;border-bottom:1px dashed var(--line);font-size:.9rem}
+#eky-pricing .plines li span:first-child{color:var(--ink-soft)}
+#eky-pricing .plines li span:last-child{font-weight:650;font-variant-numeric:tabular-nums;white-space:nowrap}
+#eky-pricing .plines li.inc span:last-child{color:var(--good)}
+#eky-pricing .plines li.inc span:first-child::before{content:"\2713";color:var(--good);font-weight:700;margin-right:.45rem}
+#eky-pricing .plines li.extra span:last-child{color:var(--bad)}
+#eky-pricing .plines li.extra span:first-child::before{content:"+";color:var(--bad);font-weight:700;margin-right:.45rem}
+
+#eky-pricing .total{display:flex;justify-content:space-between;gap:1rem;align-items:baseline;padding:1.05rem 0 .3rem;border-top:2px solid var(--ink)}
+#eky-pricing .total--open{border-top-color:var(--line)}
+#eky-pricing .total .lbl{font-family:var(--font-display);font-size:1.15rem;font-weight:600;line-height:1.2}
+#eky-pricing .total .lbl .lbl-note{display:block;font-family:var(--font-body);font-size:.76rem;font-weight:500;color:var(--muted);margin-top:.28rem}
+#eky-pricing .total .amt{font-family:var(--font-display);font-size:clamp(2rem,1.6rem + 1.6vw,2.9rem);font-weight:600;color:var(--accent);line-height:1;font-variant-numeric:tabular-nums;text-align:right}
+#eky-pricing .total .amt small{font-family:var(--font-body);font-size:.85rem;font-weight:600;color:var(--muted);display:block;text-align:right;margin-top:.25rem}
+#eky-pricing .amt-range{font-family:var(--font-display);font-weight:700;font-size:clamp(1.35rem,1.05rem + 1vw,1.9rem);color:var(--bad);line-height:1.1;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+#eky-pricing .amt-range small{font-family:var(--font-body);font-size:.82rem;font-weight:600;color:var(--muted);display:block;text-align:right;margin-top:.25rem}
+#eky-pricing .est-note{font-size:.8rem;color:var(--bad);margin-top:.7rem;line-height:1.45}
+#eky-pricing .price-foot{font-size:.85rem;color:var(--muted);margin-top:1.2rem;padding-top:1.1rem;border-top:1px solid var(--line);line-height:1.5}
+#eky-pricing .price-foot strong{color:var(--ink)}
 
 .included{margin-top:1.3rem}
 .included li{position:relative;padding-left:1.6rem;margin-bottom:.5rem;font-size:.9rem;color:var(--ink-soft)}
