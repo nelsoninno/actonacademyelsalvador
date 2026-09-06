@@ -439,6 +439,14 @@ table.compare td:nth-child(2){border-left:3px solid var(--accent);border-right:3
 
 /* ---------- faq ---------- */
 .faq-list{margin-top:2.2rem;border-top:1px solid var(--line)}
+/* Category headings inside the FAQ list. The first needs no top rule because
+   .faq-list already draws one. */
+.faq-cat{
+  font-family:var(--font-display);font-size:clamp(1.35rem,1.15rem + .7vw,1.7rem);
+  font-weight:700;color:var(--ink);letter-spacing:-.01em;
+  margin:2.6rem 0 .2rem;padding-top:2.2rem;border-top:2px solid var(--accent);
+}
+.faq-cat:first-child{margin-top:0;padding-top:1.6rem;border-top:0}
 .faq-item{border-bottom:1px solid var(--line)}
 .faq-item h3{
   font-family:var(--font-body);font-size:1.06rem;font-weight:650;
