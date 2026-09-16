@@ -382,6 +382,14 @@ table.compare td:nth-child(2){border-left:3px solid var(--accent);border-right:3
 #eky-pricing .est-note{font-size:.8rem;color:var(--bad);margin-top:.7rem;line-height:1.45}
 #eky-pricing .price-foot{font-size:.85rem;color:var(--muted);margin-top:1.2rem;padding-top:1.1rem;border-top:1px solid var(--line);line-height:1.5}
 #eky-pricing .price-foot strong{color:var(--ink)}
+#eky-pricing .price-note{
+  max-width:min(900px,100%);margin-inline:auto;
+  margin-top:clamp(1.4rem,3vw,2.1rem);
+  padding:1.05rem 1.35rem;
+  border:1px solid var(--line);border-radius:14px;background:var(--surface);
+  text-align:center;color:var(--ink-soft);font-size:.95rem;line-height:1.6;
+}
+#eky-pricing .price-note strong{color:var(--ink);font-weight:700}
 
 .included{margin-top:1.3rem}
 .included li{position:relative;padding-left:1.6rem;margin-bottom:.5rem;font-size:.9rem;color:var(--ink-soft)}
@@ -465,6 +473,12 @@ table.compare td:nth-child(2){border-left:3px solid var(--accent);border-right:3
 .faq-item .answer{padding:0 1rem 1.5rem 0}
 .faq-item .answer p{color:var(--muted);font-size:.98rem;margin-bottom:.8rem}
 .faq-item .answer p:last-child{margin-bottom:0}
+.faq-item .answer h4{
+  font-family:var(--font-body);font-size:.95rem;font-weight:700;
+  letter-spacing:.05em;text-transform:uppercase;color:var(--ink);
+  margin:1.25rem 0 .45rem;
+}
+.faq-item .answer > h4:first-child{margin-top:0}
 .faq-item .answer ul{margin:.4rem 0 .9rem}
 .faq-item .answer li{position:relative;padding-left:1.4rem;margin-bottom:.4rem;color:var(--muted);font-size:.96rem}
 .faq-item .answer li::before{content:"\2022";position:absolute;left:.3rem;color:var(--accent)}
