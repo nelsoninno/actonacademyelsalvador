@@ -594,6 +594,7 @@ table.compare td:nth-child(2){border-left:3px solid var(--accent);border-right:3
 /* timeline with photos */
 .tl-item .shot{margin:.9rem 0 .2rem;max-width:520px;aspect-ratio:3/2;border-radius:14px}
 .tl-item .shot-quest{max-width:420px;aspect-ratio:1}
+.tl-item .shot-lunch{max-width:420px;aspect-ratio:1}
 
 /* NGA phases with photos */
 .phase{overflow:hidden;padding:0}
