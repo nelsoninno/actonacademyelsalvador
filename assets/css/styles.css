@@ -337,7 +337,10 @@ table.compare td:nth-child(2){border-left:3px solid var(--accent);border-right:3
 
 #eky-pricing .tier{font-size:.74rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:.3rem}
 #eky-pricing .tier--other{color:var(--muted)}
-#eky-pricing .age{color:var(--muted);font-size:.9rem;font-weight:400;margin:0 0 1.2rem}
+#eky-pricing .age{color:var(--muted);font-size:.9rem;font-weight:400;margin:0 0 .55rem}
+#eky-pricing .iva-tag{display:inline-block;align-self:flex-start;margin:0 0 1.1rem;padding:.24rem .6rem;
+  border:1px solid var(--accent);border-radius:999px;background:transparent;
+  font-size:.7rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
 
 #eky-pricing .enroll{font-size:clamp(.78rem,4cqi,1.05rem);color:var(--ink);font-weight:600;line-height:1.3;white-space:nowrap}
 #eky-pricing .enroll .eval{font-weight:700}
