@@ -25,4 +25,4 @@
 .job .btn:disabled{cursor:default;transform:none}
 .nav a[aria-current="page"]{text-decoration:underline;text-decoration-color:var(--accent);text-decoration-thickness:2px;text-underline-offset:.4rem}
 a:focus-visible,button:focus-visible{outline:3px solid var(--accent-2);outline-offset:4px}
-@media(max-width:760px){.careers-hero-grid,.careers-culture-grid,.job{grid-template-columns:1fr}.careers-photo{max-width:360px}.careers-photo img{max-height:420px;object-fit:cover;object-position:50% 35%}.careers-hero-grid{gap:2.5rem}.job{gap:1.5rem;padding:2.5rem 0}.job-number{margin-bottom:1rem}.job-jumps{margin-bottom:2rem}}
+@media(max-width:760px){.careers-hero-grid,.careers-culture-grid,.job{grid-template-columns:1fr}.careers-photo{max-width:360px}.careers-hero-grid{gap:2.5rem}.job{gap:1.5rem;padding:2.5rem 0}.job-number{margin-bottom:1rem}.job-jumps{margin-bottom:2rem}}
