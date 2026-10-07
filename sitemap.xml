@@ -76,4 +76,22 @@
     <priority>0.5</priority>
   </url>
 
+  <url>
+    <loc>https://www.actonacademyelsalvador.com/work-at-acton.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.actonacademyelsalvador.com/work-at-acton.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.actonacademyelsalvador.com/es/trabaja-en-acton.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.actonacademyelsalvador.com/work-at-acton.html"/>
+    <lastmod>2026-10-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.actonacademyelsalvador.com/es/trabaja-en-acton.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.actonacademyelsalvador.com/work-at-acton.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.actonacademyelsalvador.com/es/trabaja-en-acton.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.actonacademyelsalvador.com/work-at-acton.html"/>
+    <lastmod>2026-10-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>

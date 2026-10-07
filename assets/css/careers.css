@@ -1,0 +1,28 @@
+/* Careers page: the existing brand tokens and site components. */
+.careers-hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.25fr .75fr;gap:clamp(2rem,5vw,4rem);align-items:center}
+.careers-hero h1{font-size:clamp(2.8rem,2rem + 3vw,4.6rem);margin-bottom:1.1rem}
+.careers-headline{font-family:var(--font-display);font-size:clamp(1.55rem,1.2rem + 1vw,2.1rem);font-weight:600;line-height:1.25;margin-bottom:1.4rem;max-width:25ch}
+.careers-hero .lede{font-size:clamp(1rem,.94rem + .3vw,1.16rem);line-height:1.75}
+.careers-location{font-size:.85rem;color:var(--muted);margin-top:1.25rem}
+.careers-photo img{width:100%;height:auto;border-radius:22px;box-shadow:0 26px 60px rgba(16,35,63,.17)}
+.careers-culture-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4rem)}
+.careers-culture h2{font-size:clamp(1.8rem,1.4rem + 1vw,2.35rem);line-height:1.25}
+.careers-culture .eyebrow{color:var(--ink-soft)}
+.careers-culture p+p{margin-top:1.15rem}
+.job-jumps{display:flex;flex-wrap:wrap;gap:.6rem;margin-bottom:3rem}
+.job-jumps a{display:inline-flex;align-items:center;gap:1rem;font-size:.83rem;padding:.65rem 1rem;border:1px solid var(--line-warm);border-radius:999px;text-decoration:none;color:var(--ink);background:var(--mint-soft)}
+.job-jumps a:hover{background:var(--mint);border-color:var(--ink)}
+.job{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(2rem,5vw,4rem);padding:3.25rem 0;border-top:1px solid var(--line);scroll-margin-top:90px}
+.job:last-child{padding-bottom:0}
+.job-number{display:block;font-family:var(--font-display);font-size:2.1rem;color:var(--accent);line-height:1;margin-bottom:1.5rem}
+.job-heading .eyebrow{font-size:.7rem;line-height:1.7;letter-spacing:.1em;color:var(--muted);margin-bottom:.8rem}
+.job h3{font-size:clamp(1.65rem,1.3rem + 1vw,2.15rem);line-height:1.2}
+.job-description{color:var(--muted);line-height:1.8}
+.job-content h4{font-size:.78rem;text-transform:uppercase;letter-spacing:.1em;margin:1.65rem 0 .75rem}
+.job-points{margin-bottom:1.8rem}
+.job-points li{position:relative;padding-left:1.25rem;margin:.45rem 0;color:var(--muted);font-size:.9rem}
+.job-points li::before{content:'•';color:var(--accent);position:absolute;left:0;font-weight:700}
+.job .btn:disabled{cursor:default;transform:none}
+.nav a[aria-current="page"]{text-decoration:underline;text-decoration-color:var(--accent);text-decoration-thickness:2px;text-underline-offset:.4rem}
+a:focus-visible,button:focus-visible{outline:3px solid var(--accent-2);outline-offset:4px}
+@media(max-width:760px){.careers-hero-grid,.careers-culture-grid,.job{grid-template-columns:1fr}.careers-photo{max-width:360px}.careers-photo img{max-height:420px;object-fit:cover;object-position:50% 35%}.careers-hero-grid{gap:2.5rem}.job{gap:1.5rem;padding:2.5rem 0}.job-number{margin-bottom:1rem}.job-jumps{margin-bottom:2rem}}
